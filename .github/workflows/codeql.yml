@@ -3,10 +3,10 @@ name: Python Linting
 on:
   push:
     branches:
-      - '**'  # This will trigger the workflow on push to any branch
+      - '**'
   pull_request:
     branches:
-      - '**'  # This will trigger the workflow on pull requests to any branch
+      - '**'
 
 jobs:
   lint:
@@ -22,4 +22,4 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8
     - name: Run Flake8
-      run: flake8 .
+      run: flake8 . --max-line-length=120
