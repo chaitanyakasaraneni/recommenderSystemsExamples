@@ -32,13 +32,25 @@ To run this code, you need:
    - Download and extract the zip file
    - Place the `ratings.csv` and `movies.csv` files in a directory named `ml-latest-small` in the same folder as the Python script
 
+## Code Structure
+
+The project is now split into three main Python files:
+
+1. `user_based_cf.py`: Contains the implementation of user-based collaborative filtering.
+2. `item_based_cf.py`: Contains the implementation of item-based collaborative filtering.
+3. `main.py`: The main script that uses both collaborative filtering methods to generate recommendations and evaluate their performance.
+
+This modular structure allows for easier understanding and modification of each collaborative filtering method independently.
+
 ## Usage
 
-Run the script using Python:
+To run the recommender system:
 
 ```
-python collaborativeFiltering.py
+python main.py
 ```
+
+This will execute the main script, which loads the data, generates recommendations using both methods, and evaluates their performance.
 
 The script will:
 1. Load and preprocess the MovieLens data
