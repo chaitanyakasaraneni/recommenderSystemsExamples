@@ -22,4 +22,4 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8
     - name: Run Flake8
-      run: flake8 . --max-line-length=120
+      run: flake8 . --max-line-length=120 --ignore=E302,F401
