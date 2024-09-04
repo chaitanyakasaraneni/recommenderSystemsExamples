@@ -69,7 +69,7 @@ You can customize the following parameters in the script:
 ## Limitations
 
 - This implementation is meant for educational purposes and may not scale well to very large datasets.
-- The current version loads the entire dataset into memory, which may not be feasible for larger datasets.
+- The current version loads the entire dataset into memory, which may not be feasible for larger datasets. Also, you might find this implementation slower.
 - Advanced techniques like matrix factorization or hybrid methods are not implemented in this basic version.
 
 Feel free to experiment with the code and extend it for your own projects!
