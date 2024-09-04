@@ -41,16 +41,14 @@ def main():
         user_based_recommendations = get_user_based_recommendations(
             user_id, user_item_matrix)
         for movie_id, predicted_rating in user_based_recommendations:
-            movie_title = movies_df[movies_df['movieId']
-                                    == movie_id]['title'].values[0]
+            movie_title = movies_df[movies_df['movieId'] == movie_id]['title'].values[0]
             print(f"Movie: {movie_title}, Predicted rating: {predicted_rating:.2f}")
 
         print("\nItem-Based Collaborative Filtering Recommendations:")
         item_based_recommendations = get_item_based_recommendations(
             user_id, item_cf_model)
         for movie_id, predicted_rating in item_based_recommendations:
-            movie_title = movies_df[movies_df['movieId']
-                                    == movie_id]['title'].values[0]
+            movie_title = movies_df[movies_df['movieId'] == movie_id]['title'].values[0]
             print(f"Movie: {movie_title}, Predicted rating: {predicted_rating:.2f}")
 
         print("\nEvaluating Recommender Systems")
