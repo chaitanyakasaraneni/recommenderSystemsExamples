@@ -16,8 +16,7 @@ def load_data():
 def mean_absolute_error(true_ratings, predicted_ratings):
     return np.mean(
         np.abs(
-            np.array(true_ratings) -
-            np.array(predicted_ratings)))
+            np.array(true_ratings) - np.array(predicted_ratings)))
 
 
 def main():
@@ -44,9 +43,7 @@ def main():
         for movie_id, predicted_rating in user_based_recommendations:
             movie_title = movies_df[movies_df['movieId']
                                     == movie_id]['title'].values[0]
-            print(
-                f"Movie: {movie_title}, Predicted rating: {
-                    predicted_rating:.2f}")
+            print(f"Movie: {movie_title}, Predicted rating: {predicted_rating:.2f}")
 
         print("\nItem-Based Collaborative Filtering Recommendations:")
         item_based_recommendations = get_item_based_recommendations(
@@ -54,9 +51,7 @@ def main():
         for movie_id, predicted_rating in item_based_recommendations:
             movie_title = movies_df[movies_df['movieId']
                                     == movie_id]['title'].values[0]
-            print(
-                f"Movie: {movie_title}, Predicted rating: {
-                    predicted_rating:.2f}")
+            print(f"Movie: {movie_title}, Predicted rating: {predicted_rating:.2f}")
 
         print("\nEvaluating Recommender Systems")
         train_data, test_data = train_test_split(

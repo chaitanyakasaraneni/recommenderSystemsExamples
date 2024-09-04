@@ -22,8 +22,7 @@ def user_based_cf(user_id, item_id, matrix, k=10):
 
     # Predict rating
     numerator = sum(
-        user_similarities[user_index][u] *
-        matrix.iloc[u][item_id] for u in similar_users if not pd.isna(
+        user_similarities[user_index][u] * matrix.iloc[u][item_id] for u in similar_users if not pd.isna(
             matrix.iloc[u][item_id]))
     denominator = sum(abs(user_similarities[user_index][u])
                       for u in similar_users if not pd.isna(matrix.iloc[u][item_id]))

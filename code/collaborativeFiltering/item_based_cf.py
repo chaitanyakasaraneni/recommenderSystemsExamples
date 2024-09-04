@@ -29,8 +29,7 @@ class ItemBasedCF:
         # Predict rating
         user_row = self.matrix.loc[user_id]
         numerator = sum(
-            self.item_similarities[item_index][i] *
-            user_row.iloc[i] for i in similar_items if not pd.isna(
+            self.item_similarities[item_index][i] * user_row.iloc[i] for i in similar_items if not pd.isna(
                 user_row.iloc[i]))
         denominator = sum(abs(self.item_similarities[item_index][i])
                           for i in similar_items if not pd.isna(user_row.iloc[i]))
