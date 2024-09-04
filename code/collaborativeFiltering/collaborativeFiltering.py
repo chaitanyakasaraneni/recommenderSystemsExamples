@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
@@ -5,8 +6,9 @@ from sklearn.model_selection import train_test_split
 
 # Step 1: Load the MovieLens dataset
 print("Step 1: Loading MovieLens Data")
-ratings_df = pd.read_csv('../datasets/ml-latest-small/ratings.csv')
-movies_df = pd.read_csv('../datasets/ml-latest-small/movies.csv')
+cwd = os.getcwd()
+ratings_df = pd.read_csv(cwd+'/datasets/ml-latest-small/ratings.csv')
+movies_df = pd.read_csv(cwd+'/datasets/ml-latest-small/movies.csv')
 
 print(f"Ratings data shape: {ratings_df.shape}")
 print(f"Movies data shape: {movies_df.shape}")
